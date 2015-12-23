@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Falling ball</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<!--header-->
+    <nav class="navbar navbar-light bg-faded">
+        <a class="navbar-brand" href="/">Falling ball</a>
+    </nav>
+<!--end header-->
+    <div class="content">
+        <div class="col-xs-6 drop-container">
+            <canvas id="canvas" class="ball"></canvas>
+        </div>
+        <div class="col-xs-6">
+            <form class="form">
+                <label for="radius">Radius (1 - 75 px)</label>
+                <input id="radius" class="form-control" type="number" value="50" step="1"/>
+                <label for="speed-conservation-coefficient">Speed conservation coefficient (0 - 0.99)</label>
+                <input id="speed-conservation-coefficient" class="form-control" type="number" value="0.9" step="0.01"/>
+                <label for="g">Acceleration of gravity (0.01 - 20 m/s^2)</label>
+                <input id="g" class="form-control" type="number" value="9.8" step="0.1"/>
+                <label for="height">Height (m) (1m = 100px)</label>
+                <input id="height" class="form-control" type="text" value="3" step="0.5"/>
+                <button type="button" id="startButton">Draw and drop</button>
+            </form>
+        </div>
+    </div>
+<!--footer-->
+    <footer class="footer">
+        <div class="container text-center">
+            <a href="mailto:malinovsky.dev@gmail.com"><p class="text-muted">Max Malinovsky</p></a>
+        </div>
+    </footer>
+<!--end footer-->
+</body>
+</html>
