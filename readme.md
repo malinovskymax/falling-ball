@@ -1,5 +1,7 @@
 ## README
 
+[Demo video](https://youtu.be/QkeTCYBJYy8) (youtube, low fps)
+
 Please consider, this is not yet well-tested, and was made only for educational purposes.
 
 It's a ball, that bounces accordingly to (almost) real-life physics, or to your own parameters.
