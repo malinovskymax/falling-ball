@@ -2,20 +2,14 @@ html, body {
     min-height: 100%;
 }
 
-.content {
-    height: 300px;
-    overflow: visible;
-    margin-bottom: 100px;
-}
-
-.drop-container {
-    height: 300px;
-}
-
 .ball {
     position: absolute;
 }
 
-.footer .container {
-    padding-top: 100px;
+.footer {
+    padding-top: 4rem;
+}
+
+#benchmark {
+    display: none;
 }
