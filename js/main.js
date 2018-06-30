@@ -1,44 +1,46 @@
 'use strict';
 
-$('document').ready(function(){
+$(function(){
+    const BALL_COLOR = '#00FF00';
     // canvas initialization
-    var canvas = document.getElementById('canvas');
-    var context = canvas.getContext('2d');
+    let canvas = $('#canvas')[0];
+    let context = canvas.getContext('2d');
 
-    var startButton = document.getElementById('startButton');
-
-    startButton.onclick = function() {
+    $('#startButton').click(function() {
+        $('#benchmark').hide();
         // coefficient, how many speed saves the ball, when hitting the floor
-        var speedConservationCoefficient = parseFloat(document.getElementById('speed-conservation-coefficient').value);
+        let speedConservationCoefficient = parseFloat($('#speed-conservation-coefficient').val());
         // m/s^2
-        var acceleration = parseFloat(document.getElementById('g').value);
+        let acceleration = parseFloat($('#g').val());
         // m
-        var height = parseFloat(document.getElementById('height').value);
+        let height = parseFloat($('#height').val());
         // px
-        var radius = parseInt(document.getElementById('radius').value);
+        let radius = parseInt($('#radius').val());
+        let diameter = radius*2;
 
-        // TODO params validation
-
-        // clear before redraw
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        var centerX = canvas.width / 2;
-        var centerY = canvas.height / 2;
-
+        // clear
+        canvas.height = canvas.width = diameter;
+        context.clearRect(0, 0, diameter, diameter);
+        // draw
         context.beginPath();
-        context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-        context.fillStyle = '#00FF00';
+        context.arc(radius, radius, radius, 0, 2 * Math.PI);
+        context.fillStyle = BALL_COLOR;
         context.fill();
 
         // move ball to starting position
-        canvas.style.top = '0px';
+        canvas.style.top = '0';
 
-        // run animation
-        animate({
-            // moving object
+        animate.call(this, {
             canvas: canvas,
             speedConservationCoefficient: speedConservationCoefficient,
             acceleration: acceleration,
             height: height
         });
-    };
-});
+    }.bind(this));
+
+    $(this).on('ballStopped', function() {
+        $('#benchmark').show();
+        $('#elapsed-time').text(Math.round(window.elapsedTime) + ' s elapsed');
+        $('#fps').text(Math.round(window.fps) + ' FPS');
+    });
+}.bind(this));
