@@ -2,8 +2,6 @@
 
 [Demo video](https://youtu.be/QkeTCYBJYy8) (youtube, low fps)
 
-Please consider, this is not yet well-tested, and was made only for educational purposes.
-
 It's a ball, that bounces accordingly to (almost) real-life physics, or to your own parameters.
 
 The main parameter of the ball's bouncing is a speed conservation coefficient.
@@ -20,4 +18,4 @@ of the original shape of the ball and the surface beneath it, causing the ball t
 
 Instead of doing this over-complicated calculations, I use a single coefficient.
 When ball hits the floor, I just multiply its speed near the floor by that coefficient,
-and use the resulting value as the initial velocity of the ball bouncing.
+and use the resulting value as the initial vertical velocity of the ball.
