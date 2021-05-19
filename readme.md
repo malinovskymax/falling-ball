@@ -4,9 +4,7 @@
 
 It's a ball, that bounces accordingly to (almost) real-life physics, or to your own parameters.
 
-The main parameter of the ball's bouncing is a speed conservation coefficient.
-
-## How does work this coefficient?
+The main parameter of the ball's bouncing is a speed conservation coefficient. How does this coefficient work?
 
 Consider falling ball, that touches the floor.
 
