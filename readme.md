@@ -1,6 +1,6 @@
 [Demo video on youtube](https://youtu.be/iaNiIlN-Ybo)
 
-It's a ball, that bounces accordingly to (almost) real-life physics, or parameters of your choise.
+It's a ball that bounces accordingly to (almost) real-life physics or parameters of your choise.
 
 The main parameter of the ball's bouncing is a speed conservation coefficient.
 
