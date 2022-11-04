@@ -1,5 +1,3 @@
-## README
-
 [Demo video on youtube](https://youtu.be/iaNiIlN-Ybo)
 
 It's a ball, that bounces accordingly to (almost) real-life physics, or parameters of your choise.
