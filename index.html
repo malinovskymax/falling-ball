@@ -4,12 +4,8 @@
     <meta charset="utf-8">
     <title>Falling ball</title>
     <!-- third-party -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- third-party end -->
-    <script src="js/animation.js"></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -23,22 +19,24 @@
         <div class="row">
             <div id="drop-container" class="col-6">
                 <canvas id="canvas" class="ball"></canvas>
+                <hr id="surface">
             </div>
             <div class="col-6">
                 <form class="form">
-                    <label for="radius">Radius (px)</label>
-                    <input id="radius" class="form-control" type="number" value="25" step="1"/>
+                    <label for="radius">Ball radius (px)</label>
+                    <input id="radius" class="form-control" type="number" value="40" step="5"/>
                     <label for="speed-conservation-coefficient">Speed conservation coefficient (0 - 0.99)</label>
-                    <input id="speed-conservation-coefficient" class="form-control" type="number" value="0.9" step="0.01"/>
-                    <label for="g">Acceleration of gravity (0.01 - 20 m/s^2)</label>
+                    <input id="speed-conservation-coefficient" class="form-control" type="number" value="0.8" step="0.05"/>
+                    <label for="g">Acceleration of gravity (m/s&sup2;)</label>
                     <input id="g" class="form-control" type="number" value="9.8" step="0.1"/>
                     <label for="height">Height (m) (1m = 100px)</label>
-                    <input id="height" class="form-control" type="text" value="3.3" step="0.1"/>
+                    <input id="height" class="form-control" type="number" value="5.2" step="0.1"/>
                     <button type="button" id="startButton">Draw and drop</button>
                 </form>
                 <div id="benchmark">
                     <p id="elapsed-time"></p>
                     <p id="fps"></p>
+                    <p id="frame-count"></p>
                 </div>
             </div>
         </div>
